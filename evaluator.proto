@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Expr
+{
+	string str_exp = 1;
+	int32 output = 2;
+}    
+service Evaluator
+{
+	rpc Eval(Expr) returns (Expr) {}
+}
